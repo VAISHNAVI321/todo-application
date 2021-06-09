@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My mini Project 1(To Do Application)</title>
+    <script src="todoapp.js"> </script>
+    <style>
+        .body
+        {
+            margin:0%;
+            padding:0%;
+        }
+        .container1
+        {
+            background:red;
+            max-width: 400px;
+            width: 100%;
+            margin: 120px auto 10px;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0px 10px 15px rgba(0,0,0,0.5);
+        }
+        .container1 header
+        {
+            font-size:30px;
+            font-weight: 600;
+        }
+        .container2
+        {
+            background:whitesmoke;
+            max-width: 400px;
+            margin: 20px auto;
+            width: 100%;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 0px 10px 15px rgba(0,0,0,0.5);
+        }
+        .list-group1
+        {
+            display:flex;
+            justify-content: space-around;
+            align-items:center;
+            background-color:lightgray;
+            height:40px;
+            border-radius:5px;
+        }
+        .ulists
+        {
+            display:inline-block;
+            justify-content: space-around;
+            margin:10px 10px;
+            align-items: center;
+        }
+        .form-group
+        {
+            display: inline-block;
+        }
+        @media screen and (max-width:600px){
+            .container1{
+                display: block;
+            }
+            .container2{
+                display: block;
+            }
+            .form-group{
+                display: block;
+            }
+            .list-group1
+            {
+                display:flex;
+                justify-content: space-around;
+                align-items:center;
+                background-color:lightgray;
+                height:40px;
+                border-radius:5px;
+            }
+            .ulists
+            {
+                display:inline-block;
+                justify-content: space-around;
+                margin:10px 10px;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class = "container1">
+        <header align="center">Todo List</header>
+    </div>
+    <div class = "container2">
+        <h2>Add Items</h2>
+        <label id="addsuccess" class = "text-success" style="display : none;"></label>
+        <form id = "addForm">
+            <div class="form-group">
+                <div>
+                    <input type="text" size="30" id = "item" >
+                </div> 
+                <div>
+                    <input type="submit" id="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="container2">
+        <h2>Tasks</h3>
+        <form id = "addForm">
+            <ul class="list-group" id="items"></ul>
+        </form>    
+    </div>
+</body>
+</html>
